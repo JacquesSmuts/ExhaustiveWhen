@@ -1,0 +1,3 @@
+rootProject.name='Exhaustive When'
+include ':app'
+include ':exhaustive-when'

@@ -1,0 +1,23 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+publish {
+    userOrg = 'jacquessmuts'
+    groupId = 'com.jacquessmuts'
+    repoName = 'asdf'
+    artifactId = 'asdf'
+    publishVersion = '0.1.0'
+    bintrayUser = 'JacquesSmuts'
+    bintrayKey = System.getenv("BINTRAY_KEY")
+    desc = 'An extension function to force when exhaustiveness on a when function'
+    website = 'https://github.com/JacquesSmuts/ExhaustiveWhen'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
